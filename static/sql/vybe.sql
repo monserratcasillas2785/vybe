@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `rdboutique`
+-- Base de datos: `vybe`
 --
 
 -- --------------------------------------------------------
@@ -42,8 +42,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nombre`, `correo`, `clave`, `telefono`, `fechareg`, `perfil`) VALUES
-(2, 'Diego Navarro', 'diego.navarro2739@alumnos.udg.mx', 'scrypt:32768:8:1$bgoGodxOPrA9Lc2v$514c7c88b4685485db544e8d625da967ef8e4e63143c19d17cb68e623dd14e6a7c91238b200e668365023b5bbbb441a59e376345afd69498b329251466f035ef', '3344633389', '2025-03-07 12:36:22', 'A'),
-(3, 'pedro lopez', 'pedrolopez.1007@gmail.com', 'scrypt:32768:8:1$LfMWo3L0e48XsIMK$b7556f9ad7bf15b8b0a5f55aff5286eabb227f17370fb1d294d613f7d7695cc31e388fb2a698e937d3b2fb7b793ff5829d8cf47eb52b4f5c6ac3db54354609cf', '3312151412', '2025-03-07 12:37:37', 'C');
+(2, 'Carolina Casillas', 'monserrat.casillas2785@alumnos.udg.mx', 'scrypt:32768:8:1$bgoGodxOPrA9Lc2v$514c7c88b4685485db544e8d625da967ef8e4e63143c19d17cb68e623dd14e6a7c91238b200e668365023b5bbbb441a59e376345afd69498b329251466f035ef', '3344633389', '2025-03-07 12:36:22', 'A'),
+(3, 'David Velazquez', 'davidvelazquez.2328@gmail.com', 'scrypt:32768:8:1$LfMWo3L0e48XsIMK$b7556f9ad7bf15b8b0a5f55aff5286eabb227f17370fb1d294d613f7d7695cc31e388fb2a698e937d3b2fb7b793ff5829d8cf47eb52b4f5c6ac3db54354609cf', '3312151412', '2025-03-07 12:37:37', 'C');
 
 --
 -- Índices para tablas volcadas

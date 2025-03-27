@@ -7,19 +7,19 @@ from flask_mysqldb import MySQL
 from werkzeug.security import generate_password_hash 
 from datetime import datetime
 
-rdboutique = Flask(__name__)
-db         = MySQL(rdboutique)
-adminSesion = LoginManager(rdboutique)
+vybe = Flask(__name__)
+db         = MySQL(vybe)
+adminSesion = LoginManager(vybe)
 
 @adminSesion.user_loader
 def load_user(user_id):
     return ModelUser.get_by_id(db,id)
 
-@rdboutique.route('/')
+@vybe.route('/')
 def home():
     return render_template('home.html')
 
-@rdboutique.route('/signup',methods=['POST','GET'])
+@vybe.route('/signup',methods=['POST','GET'])
 def signup():
     if request.method == 'POST':
         nombre = request.form['nombre']
@@ -36,7 +36,7 @@ def signup():
     else:
         return render_template('signup.html')
 
-@rdboutique.route('/signin',methods=['POST','GET'])
+@vybe.route('/signin',methods=['POST','GET'])
 def signin():
     if request.method == 'POST':
         usuario = User(0,None,request.form['correo'], request.form['clave'], None, None, None)
@@ -58,11 +58,11 @@ def signin():
         
         return render_template('signin.html')
 
-@rdboutique.route('/signout',methods=['GET','POST'])
+@vybe.route('/signout',methods=['GET','POST'])
 def signout():
     logout_user()
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    rdboutique.config.from_object(config['development'])
-    rdboutique.run(port=3300)
+    vybe.config.from_object(config['development'])
+    vybe.run(port=3300)
